@@ -1,11 +1,11 @@
 <?php
 defined('server') ? null : define("server", "localhost");
-defined('user') ? null : define ("user", "bfzpfivh_kgbadmin") ;
-defined('pass') ? null : define("pass","Kgbtech@12345");
-defined('database_name') ? null : define("database_name", "bfzpfivh_kgb") ;
-// defined('user') ? null : define ("user", "root") ;
-// defined('pass') ? null : define("pass","");
-// defined('database_name') ? null : define("database_name", "db_ecommerce") ;
+// defined('user') ? null : define ("user", "bfzpfivh_kgbadmin") ;
+// defined('pass') ? null : define("pass","Kgbtech@12345");
+// defined('database_name') ? null : define("database_name", "bfzpfivh_kgb") ;
+defined('user') ? null : define ("user", "root") ;
+defined('pass') ? null : define("pass","");
+defined('database_name') ? null : define("database_name", "db_ecommerce") ;
 
 $this_file = str_replace('\\', '/', __File__) ;
 $doc_root = $_SERVER['DOCUMENT_ROOT'];

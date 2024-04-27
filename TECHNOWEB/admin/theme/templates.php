@@ -24,7 +24,7 @@
 <!-- Custom Fonts -->
 <link href="<?php echo web_root; ?>admin/font/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-<link href="<?php echo web_root; ?>admin/font/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="<?php echo web_root; ?>admin/font/fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
 <!-- DataTables CSS -->
 <link href="<?php echo web_root; ?>admin/css/dataTables.bootstrap.css" rel="stylesheet">
 
@@ -277,7 +277,7 @@ $singleuser = $user->single_user($_SESSION['USERID']);
 
 <script type="text/javascript" src="<?php echo web_root; ?>js/bootstrap-datepicker.js" charset="UTF-8"></script>
 <script type="text/javascript" src="<?php echo web_root; ?>js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
-<script type="text/javascript" src="<?php echo web_root; ?>js/bootstrap-datetimepicker.uk.js" charset="UTF-8"></script>
+<script type="text/javascript" src="<?php echo web_root; ?>js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
 
 <!-- Custom Theme JavaScript -->
 <script src="<?php echo web_root; ?>admin/js/ekko-lightbox.js"></script>
