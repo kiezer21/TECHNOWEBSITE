@@ -79,27 +79,49 @@ class Category {
 	  return isset($this->id) ? $this->update() : $this->create();
 	}
 	
+	// public function create() {
+	// 	global $mydb;
+	// 	// Don't forget your SQL syntax and good habits:
+	// 	// - INSERT INTO table (key, key) VALUES ('value', 'value')
+	// 	// - single-quotes around all values
+	// 	// - escape all values to prevent SQL injection
+	// 	$attributes = $this->sanitized_attributes();
+	// 	$sql = "INSERT INTO ".self::$tblname." (";
+	// 	$sql .= join(", ", array_keys($attributes));
+	// 	$sql .= ") VALUES ('";
+	// 	$sql .= join("', '", array_values($attributes));
+	// 	$sql .= "')";
+	// echo $mydb->setQuery($sql);
+	
+	//  if($mydb->executeQuery()) {
+	//     $this->id = $mydb->insert_id();
+	//     return true;
+	//   } else {
+	//     return false;
+	//   }
+	// }
+
 	public function create() {
 		global $mydb;
-		// Don't forget your SQL syntax and good habits:
-		// - INSERT INTO table (key, key) VALUES ('value', 'value')
-		// - single-quotes around all values
-		// - escape all values to prevent SQL injection
+	
+		// Prepare the SQL query
 		$attributes = $this->sanitized_attributes();
-		$sql = "INSERT INTO ".self::$tblname." (";
+		$sql = "INSERT INTO " . self::$tblname . " (";
 		$sql .= join(", ", array_keys($attributes));
 		$sql .= ") VALUES ('";
 		$sql .= join("', '", array_values($attributes));
 		$sql .= "')";
-	echo $mydb->setQuery($sql);
 	
-	 if($mydb->executeQuery()) {
-	    $this->id = $mydb->insert_id();
-	    return true;
-	  } else {
-	    return false;
-	  }
+		// Execute the SQL query
+		$mydb->setQuery($sql);
+		if ($mydb->executeQuery()) {
+			$this->id = $mydb->insert_id();
+			return true;
+		} else {
+			return false;
+		}
 	}
+	
 
 	public function update($id=0) {
 	  global $mydb;
