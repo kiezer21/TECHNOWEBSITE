@@ -39,7 +39,7 @@ switch ($action) {
 			$category->create();
 
 			message("New [". $_POST['CATEGORY'] ."] created successfully!", "success");
-			// redirect("index.php");
+			redirect("index.php");
 			
 		}
 		}
