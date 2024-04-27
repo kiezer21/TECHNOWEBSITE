@@ -117,7 +117,6 @@ class Category {
 		$mydb->setQuery($sql);
 		if ($mydb->executeQuery()) {
 			// $this->id = $mydb->insert_id();
-			var_dump($mydb);
 			return true;
 		} else {
 			return false;
