@@ -2,6 +2,7 @@
 require_once(LIB_PATH.DS.'database.php');
 class Category {
 	protected static  $tblname = "tblcategory";
+	public $id;
 
 	function dbfields () {
 		global $mydb;
