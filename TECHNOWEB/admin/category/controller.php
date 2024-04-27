@@ -35,11 +35,12 @@ switch ($action) {
 		}else{	
 			$category = New Category();
 			$category->CATEGORIES = $_POST['CATEGORY'];
-			var_dump($category);
+			
 			$category->create();
+			var_dump($category);
 
 			message("New [". $_POST['CATEGORY'] ."] created successfully!", "success");
-			redirect("index.php");
+			// redirect("index.php");
 			
 		}
 		}
