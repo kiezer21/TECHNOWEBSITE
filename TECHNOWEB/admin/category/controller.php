@@ -34,7 +34,8 @@ switch ($action) {
 			redirect('index.php?view=add');
 		}else{	
 			$category = New Category();
-			$category->CATEGORIES	= $_POST['CATEGORY'];
+			$category->CATEGORIES = $_POST['CATEGORY'];
+			var_dump($category);
 			$category->create();
 
 			message("New [". $_POST['CATEGORY'] ."] created successfully!", "success");
@@ -49,7 +50,7 @@ switch ($action) {
 		if(isset($_POST['save'])){
 
 			$category = New Category();
-			$category->CATEGORIES	= $_POST['CATEGORY'];
+			$category->CATEGORIES = $_POST['CATEGORY'];
 			$category->update($_POST['CATEGID']);
 
 			message("[". $_POST['CATEGORY'] ."] has been updated!", "success");
